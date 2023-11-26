@@ -12,8 +12,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <StickyNavbar> </StickyNavbar>{children}</body>
+      <body >
+        <StickyNavbar/> 
+        {children}
+      </body>
     </html>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-"use client";
+
 import  React from "react";
 import { styled } from "@mui/material/styles";
 import { makeStyles } from "@mui/material/styles";
@@ -59,7 +59,7 @@ import marked from "marked";
 function Swith_dark_mode(props) {
  
     return (
-        <div className={props.style} >
+        <div className={props.myStyle}>
         <MaterialUISwitch />
       </div>
     );
