@@ -1,9 +1,7 @@
-
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { StickyNavbar } from "@/Components/NavBar";
-import store from "./store";
-import { Provider } from "react-redux";
+import { Providers } from "./GlobalRedux/provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,12 +14,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-       
+        <Providers>
           <StickyNavbar />
           {children}
-       
+        </Providers>
       </body>
     </html>
- 
   );
 }
