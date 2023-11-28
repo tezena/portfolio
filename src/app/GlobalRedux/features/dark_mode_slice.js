@@ -11,12 +11,11 @@ export const dark_mode_slice = createSlice(
         name: "dark_mode",
         initialState,
         reducers: {
-            dark_mode_toggle:(state) =>{
-                state.value=!state
+            dark_mode_toggle: (state) => {
+          
+                state.value=!state.value
             },
-            dark_mode_off: (state) => {
-                state.value=false
-            }
+            
         }
     }
 )

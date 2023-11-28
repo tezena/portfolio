@@ -9,6 +9,7 @@ import Typography from "@mui/material/Typography";
 import marked from "marked";
 import { useSelector, useDispatch } from "react-redux";
 import { dark_mode_toggle } from "@/app/GlobalRedux/features/dark_mode_slice";
+import { useEffect } from "react";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -61,11 +62,18 @@ function Swith_dark_mode(props) {
   const dark_mode = useSelector((state) => state.dark_mode.value);
   const usedispatch = useDispatch();
 
+
+  useEffect(
+    () => {
+      console.log(dark_mode)
+       document.documentElement.classList.toggle( "dark",dark_mode)
+    },[dark_mode]
+  );
+
   return (
     <div className={props.myStyle}>
       <MaterialUISwitch
-        checked={dark_mode}
-        onChange={() => usedispatch(dark_mode_toggle())}
+        onChange={()=>usedispatch(dark_mode_toggle())}
       />
     </div>
   );
