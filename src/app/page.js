@@ -11,7 +11,7 @@ export default function Main() {
   return (
     <div className=" h-screen overflow-y-clip" >
       <Home/>
-         </div>
+    </div>
   );
 }
 
