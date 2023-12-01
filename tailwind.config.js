@@ -18,7 +18,6 @@ module.exports = {
         lato: ["Lato", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
         lobster: ["Lobster", "sans-serif"],
-        
       },
     },
   },

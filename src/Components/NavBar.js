@@ -9,9 +9,12 @@ import {
   Card,
 } from "@material-tailwind/react";
 import Swith_dark_mode from "./Swith_dark_mode";
+import { Roboto } from "next/font/google";
+ const ubuntu = Roboto({ subsets: ["greek"], weight: "500" });
 
 export function StickyNavbar() {
   const [openNav, setOpenNav] = React.useState(false);
+ 
 
   React.useEffect(() => {
     window.addEventListener(
@@ -57,7 +60,7 @@ export function StickyNavbar() {
   );
 
   return (
-    <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-8 py-4 lg:px-8 lg:py-6 text-blue-300 bg-white bg-opacity-95  dark:bg-black dark:text-white dark:bg-opacity-75 font-">
+    <Navbar className={`sticky top-0 z-10 h-max max-w-full rounded-none px-8 py-4 lg:px-8 lg:py-6 text-blue-300 bg-white bg-opacity-95  dark:bg-black dark:text-white dark:bg-opacity-75 ${ubuntu.className}`}>
       <div className="flex items-center justify-between lg:justify-center text-blue-gray-900">
         <Typography
           as="a"
