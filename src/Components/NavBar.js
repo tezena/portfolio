@@ -21,7 +21,7 @@ export function StickyNavbar() {
   }, []);
 
   const navList = (
-    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-10">
       <Typography
         as="li"
         variant="small"
@@ -29,7 +29,7 @@ export function StickyNavbar() {
         className="p-1 font-normal"
       >
         <a href="#" className="flex items-center">
-          Pages
+          Home
         </a>
       </Typography>
       <Typography
@@ -39,7 +39,7 @@ export function StickyNavbar() {
         className="p-1 font-normal"
       >
         <a href="#" className="flex items-center">
-          Account
+          Showcase
         </a>
       </Typography>
       <Typography
@@ -49,38 +49,27 @@ export function StickyNavbar() {
         className="p-1 font-normal"
       >
         <a href="#" className="flex items-center">
-          Blocks
+          Contact Me
         </a>
       </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="#" className="flex items-center">
-          Docs
-        </a>
-      </Typography>
+      
     </ul>
   );
 
   return (
-    <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-4 lg:px-8 lg:py-4 text-blue-300 bg-white bg-opacity-95  dark:bg-black dark:text-white dark:bg-opacity-75">
-      <div className="flex items-center justify-between text-blue-gray-900">
+    <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-8 py-4 lg:px-8 lg:py-6 text-blue-300 bg-white bg-opacity-95  dark:bg-black dark:text-white dark:bg-opacity-75 font-">
+      <div className="flex items-center justify-between lg:justify-center text-blue-gray-900">
         <Typography
           as="a"
           href="#"
-          className="mr-4 cursor-pointer py-1.5 font-medium"
+          className="mr-4 cursor-pointer  w-24 h-18 sm:ml-16 mt-4 lg:absolute lg:left-10"
         >
-          Tewodros Nibret
+         <img src="images/logo.png"/>
         </Typography>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 lg:w-80 ">
           <div className="mr-4 hidden lg:block">{navList}</div>
-          <div className="flex items-center gap-x-1">
-            <Button variant="text" size="sm" className="hidden lg:inline-block">
-              <span>Log In</span>
-            </Button>
+
+          <div className="flex items-center gap-x-1 lg:absolute lg:right-10">
             <Swith_dark_mode myStyle="hidden lg:inline-block" />
           </div>
           <IconButton
@@ -125,9 +114,7 @@ export function StickyNavbar() {
       <MobileNav open={openNav}>
         {navList}
         <div className="flex items-center gap-x-1">
-          <Button fullWidth variant="text" size="sm" className="">
-            <span>Log In</span>
-          </Button>
+         
           <Swith_dark_mode myStyle="" />
         </div>
       </MobileNav>
