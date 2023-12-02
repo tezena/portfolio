@@ -61,12 +61,12 @@ export function StickyNavbar() {
   );
 
   return (
-    <Navbar className={`sticky top-0 z-10 h-max max-w-full rounded-none px-8 py-4 lg:px-8 lg:py-6 text-blue-300 bg-white bg-opacity-95  dark:bg-black dark:text-white dark:bg-opacity-75 ${ubuntu.className}`}>
+    <Navbar className={`sticky top-0 z-10 h-max max-w-full rounded-none px-8 py-4 lg:px-8 lg:py-6 text-black bg-white bg-opacity-95  dark:bg-black dark:text-white dark:bg-opacity-75 ${ubuntu.className}`}>
       <div className="flex items-center justify-between lg:justify-center text-blue-gray-900">
         <Typography
           as="a"
           href="#"
-          className="mr-4 cursor-pointer  w-24 h-18 sm:ml-16 mt-4 lg:absolute lg:left-10"
+          className="mr-4 cursor-pointer  w-24 h-18 sm:ml-16 mt-4 lg:absolute lg:left-10 mb-3"
         >
          <img src="images/logo.png"/>
         </Typography>
