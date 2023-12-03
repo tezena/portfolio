@@ -2,13 +2,17 @@
 import { useSelect } from "@material-tailwind/react";
 import Image from "next/image";
 import { useSelector } from "react-redux/es/hooks/useSelector";
-import HeroBotton from "@/Components/heroBotton";
+import HeroBotton from "@/app/Components/heroBotton";
+import AnimatedBG from "../Components/AnimatedBackground/AnimatedBG";
 
 export default function Home() {
   const dark_mode = useSelector((state) => state.dark_mode.value);
   const backgroundImageUrl = dark_mode ? "url(images/bg1.png)" : "";
   return (
+    <div>
+       <AnimatedBG/>
     <div className="text-start flex-col items-start">
+    
       <div
         className="flex  flex-col sm:items-center justify-between sm:p-24 pt-32 px-8 bg-cover  h-full  bg-opacity-30 z-2 w-full"
         style={{ backgroundImage: "", height: "92%" }}
@@ -33,6 +37,7 @@ export default function Home() {
           <HeroBotton />
         </div>
       </div>
-    </div>
+      </div>
+        </div>
   );
 }
