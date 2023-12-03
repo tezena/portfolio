@@ -13,8 +13,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className="dark:bg-black">
+    <html lang="en" data-theme=  "winter">
+      <body className="dark:bg-black bg-slate-50">
         <Providers>
           <StickyNavbar />
           {children}
