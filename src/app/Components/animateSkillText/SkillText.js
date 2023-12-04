@@ -3,7 +3,7 @@ import Styles from "./SkillText.module.css";
 
 const SkillText = () => {
     return (
-      <div className="h-4 flex items-center py-4 overflow-y-clip ">
+      <div className="h-2 flex items-center py-4 overflow-y-clip relative  ">
         <div class={Styles.string}>
           <h1 className={Styles.greeting}>
             <span class="bg-gradient-to-r from-yellow-700 via-purple-500 to-orange-600 bg-clip-text text-lg font-bold text-transparent sm:text-xl font-montserrat my-4  ">

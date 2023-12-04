@@ -4,6 +4,7 @@
   text-align: center;
   animation: move 5s infinite;
   align-items: center;
+  padding: 4px 2px;
 
 }
 
@@ -11,11 +12,36 @@
   position: relative;
   top: 8.6vmin;
   animation: white-out 5s infinite;
-  padding: 8px 0px;
+  padding: 2px 0px;
+  margin-top: 6px;
 }
 
+@media (max-width: 400px) {
+  .greeting {
+    top: 3rem;
+    margin-top: 0;
+  }
+}
+
+
+
+
 .greeting:nth-child(1) {
+
+    padding-top: 4px;
   color: #fa8231;
+ 
+}
+@media (max-width: 605px) {
+  .greeting {
+    top: 3.5rem;
+   
+  }
+  .greeting:nth-child(1) {
+
+    padding-top: 0;
+ 
+}
 }
 
 .greeting:nth-child(2){

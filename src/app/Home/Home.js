@@ -29,7 +29,7 @@ export default function Home() {
           <h1 class="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-6xl font-montserrat sm:my-4 my-2">
             I'm Tewodros Nibret
           </h1>
-          <div className="flex overflow-y-clip items-center">
+          <div className="flex  sm:items-center flex-col md:flex-row  items-start ">
             <h3 class="bg-gradient-to-r from-yellow-700 via-purple-500 to-orange-600 bg-clip-text text-lg font-bold text-transparent sm:text-xl font-montserrat my-4  ">
               <spna> Full-Stack Developer |</spna> Problem Solver |{" "}
               <span></span>
