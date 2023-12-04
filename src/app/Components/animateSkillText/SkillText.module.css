@@ -1,0 +1,44 @@
+.string {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  animation: move 5s infinite;
+  align-items: center;
+
+}
+
+.greeting {
+  position: relative;
+  top: 8.6vmin;
+  animation: white-out 5s infinite;
+  padding: 8px 0px;
+}
+
+.greeting:nth-child(1) {
+  color: #fa8231;
+}
+
+.greeting:nth-child(2){
+  color: white;
+}
+
+.greeting:nth-child(3){
+  color: #c678dd;
+}
+
+.greeting:nth-child(4){
+  color: #a9b0bd;
+}
+
+@keyframes move {
+  25% {
+    transform: translatey(-5.8vmin);
+    opacity: 1;
+  }
+  50% {
+    transform: translatey(-11vmin);
+  }
+  75% {
+    transform: translatey(-16.5vmin);
+  }
+}
