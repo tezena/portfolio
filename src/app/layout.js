@@ -4,6 +4,7 @@ import "./globals.css";
 import { StickyNavbar } from "@/app/Components/NavBar";
 import { Providers } from "./GlobalRedux/provider";
 import Head from "next/head";
+import Footer from "./Components/Footer";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
           <Providers>
             <StickyNavbar />
             {children}
+            <Footer/>
           </Providers>
         </div>
       </body>
