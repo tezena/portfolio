@@ -4,9 +4,13 @@ import Image from "next/image";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import Home from "./Home/Home";
 
+
 export default function Main() {
+ 
   return (
-    <div className=" h-screen">
+    <div
+     
+    >
       <Home />
     </div>
   );

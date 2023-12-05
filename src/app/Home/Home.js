@@ -6,7 +6,10 @@ const Home = () => {
   return (
       <div className='h-full'>
       <HeroSecion />
-      <AboutSection/>
+      <AboutSection />
+      <div className='h-[400px] bg-black'>
+
+      </div>
       
     </div>
   )
