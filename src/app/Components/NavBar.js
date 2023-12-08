@@ -35,7 +35,7 @@ export function StickyNavbar() {
         className="p-1 font-normal"
       >
         <Link href="/" className="flex items-center  relative group">
-          <span className="absolute left-0 -top-1  h-1 bg-[#F8BE0C] -z-10 w-0 group-hover:w-full group-hover:transition-all"></span>
+          <span className="absolute left-0 -top-1  h-1 a -z-10 w-0 group-hover:w-full group-hover:transition-all"></span>
           <p>Home</p>
           <span className="absolute left-0 -bottom-1  h-1 bg-[#F8BE0C] -z-10 w-full group-hover:w-0 group-hover:transition-all delay-100"></span>
         </Link>
