@@ -19,7 +19,7 @@ export default function HeroSecion() {
 
   const dark_mode = useSelector((state) => state.dark_mode.value);
   return (
-    <div className="h-full  "> 
+    <div className="h-full  ">
       <div className="text-start flex-col items-start sm:items-center sm:text-center lg:pt-[3%] pt-[10%] sm:pt-[6%] relative">
         <AnimatedBG />
         <div
@@ -32,9 +32,13 @@ export default function HeroSecion() {
             <h1 class="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-4xl sm:text-6xl font-extrabold text-transparent   sm:my-4 my-2 inline">
               Hi ,
             </h1>
-            <span class="sm:text-6xl text-3xl inline">👋🏽</span>
+            <span class="sm:text-6xl text-3xl inline animate-waving-hand">
+              👋🏽
+            </span>
           </div>
-          <h1 class={`bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-4xl font-extrabold text-transparent sm:text-6xl font-montserrat sm:my-4 my-2 ${montserrat.className}`}>
+          <h1
+            class={`bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-4xl font-extrabold text-transparent sm:text-6xl font-montserrat sm:my-4 my-2 ${montserrat.className}`}
+          >
             I'm Tewodros Nibret
           </h1>
           <div className="flex  sm:items-center flex-col md:flex-row  items-start ">
