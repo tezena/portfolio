@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import {
   Navbar,
   MobileNav,
@@ -31,11 +32,11 @@ export function StickyNavbar() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center  relative group">
+        <Link href="/" className="flex items-center  relative group">
           <span className="absolute left-0 -top-1  h-1 bg-[#F8BE0C] -z-10 w-0 group-hover:w-full group-hover:transition-all"></span>
           <p>Home</p>
           <span className="absolute left-0 -bottom-1  h-1 bg-[#F8BE0C] -z-10 w-full group-hover:w-0 group-hover:transition-all delay-100"></span>
-        </a>
+        </Link>
       </Typography>
       <Typography
         as="li"
@@ -43,9 +44,9 @@ export function StickyNavbar() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <Link href="/showcase" className="flex items-center">
           Showcase
-        </a>
+        </Link>
       </Typography>
       <Typography
         as="li"
@@ -53,9 +54,19 @@ export function StickyNavbar() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
-          Contact Me
-        </a>
+        <Link href="/ContactMe" className="flex items-center">
+          Contact
+        </Link>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
+        <Link href="/About" className="flex items-center">
+          About
+        </Link>
       </Typography>
     </ul>
   );
@@ -65,7 +76,7 @@ export function StickyNavbar() {
       <div className="flex items-center justify-between lg:justify-center text-blue-gray-900">
         <Typography
           as="a"
-          href="#"
+          href="/"
           className="mr-4 cursor-pointer  w-24 h-18 sm:ml-16 mt-4 lg:absolute lg:left-10 mb-3"
         >
          <img src="images/logo.png"/>
