@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import { GiHamburgerMenu } from "react-icons/gi";
+import {GrClose}  from "react-icons/gr";
 import {
   Navbar,
   MobileNav,
@@ -72,14 +74,16 @@ export function StickyNavbar() {
   );
 
   return (
-    <Navbar className={`sticky top-0 z-30 h-max max-w-full rounded-none px-8 py-4 lg:px-8 lg:py-6 text-black bg-white bg-opacity-95  dark:bg-black dark:text-white dark:bg-opacity-75 ${ubuntu.className}`}>
+    <Navbar
+      className={`sticky top-0 z-30 h-max max-w-full rounded-none px-8 py-4 lg:px-8 lg:py-6 text-black bg-white bg-opacity-95  dark:bg-black dark:text-white dark:bg-opacity-75 ${ubuntu.className}`}
+    >
       <div className="flex items-center justify-between lg:justify-center text-blue-gray-900">
         <Typography
           as="a"
           href="/"
           className="mr-4 cursor-pointer  w-24 h-18 sm:ml-16 mt-4 lg:absolute lg:left-10 mb-3"
         >
-         <img src="images/logo.png"/>
+          <img src="images/logo.png" />
         </Typography>
         <div className="flex items-start gap-4 lg:w-80 w-42">
           <div className="mr-4 hidden lg:block">{navList}</div>
@@ -87,49 +91,19 @@ export function StickyNavbar() {
           <div className="flex items-center gap-x-1 lg:absolute lg:right-10">
             <Swith_dark_mode myStyle="hidden lg:inline-block" />
           </div>
-          <IconButton
+          <div
             variant="text"
-            className="ml-auto h-20 w-20 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden mx-auto "
-            ripple={false}
+            className="ml-auto h-10 w-12 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden mx-auto "
+            ripple={true}
             onClick={() => setOpenNav(!openNav)}
           >
-            {openNav ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                className="h-12 w-12"
-                viewBox="0 0 28 28"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className=" h-18 w-18"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            )}
-          </IconButton>
+            {openNav ? <GrClose className="w-8 h-8 " /> : <GiHamburgerMenu className="w-8 h-8 " />}
+          </div>
         </div>
       </div>
       <MobileNav open={openNav}>
         {navList}
         <div className="flex items-center gap-x-1">
-         
           <Swith_dark_mode myStyle="" />
         </div>
       </MobileNav>

@@ -2,10 +2,15 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import { Roboto } from "next/font/google";
+import { Montserrat } from "next/font/google";
 
 
-const roboto = Roboto({ subsets: ["latin-ext"],preload: true ,weight:"300"});
+const roboto = Montserrat({
+  subsets: ["vietnamese"],
+  preload: true,
+  weight: "200",
+  style: "italic",
+});
 
 const AboutSection = () => {
   useEffect(() => {
@@ -15,12 +20,12 @@ const AboutSection = () => {
   
 
   return (
-    <div className="sm:h-1/2 h-full  bg-amber-400 flex items-center sm:p-8  px-6 py-32 lg:text-3xl text-center font-montserrat font-normal ">
+    <div className="sm:h-1/2 h-full  bg-slate-100 dark:bg-opacity-50 bg-opacity-90 flex items-center sm:p-8  px-8 sm:px-20 lg:px-56 sm:py-48 py-32 lg:text-[2rem] md:text-[1.5rem] sm:text-xl text-center font-extrabold ">
       <h1
         data-aos="zoom-in"
         data-aos-easing="linear"
         data-aos-duration="2000"
-        className={`leading-relaxed text-slate-100 ${roboto.className}`}
+        className={`leading-relaxed  dark:text-slate-100  text-black ${roboto.className} font-thin`}
       >
         My journey has encompassed dynamic contributions to web and mobile
         application development projects, equipping me with proficient skills in
