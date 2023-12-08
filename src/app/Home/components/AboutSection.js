@@ -15,7 +15,7 @@ const AboutSection = () => {
   
 
   return (
-    <div className="h-[50%] bg-amber-400 flex items-center lg:p-32 lg:text-3xl text-center font-montserrat font-normal ">
+    <div className="sm:h-1/2 h-full  bg-amber-400 flex items-center sm:p-8  px-6 py-32 lg:text-3xl text-center font-montserrat font-normal ">
       <h1
         data-aos="zoom-in"
         data-aos-easing="linear"

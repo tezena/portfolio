@@ -15,17 +15,15 @@ export default function HeroSecion() {
   }, []);
 
   const dark_mode = useSelector((state) => state.dark_mode.value);
-  const backgroundImageUrl = dark_mode ? "url(images/bg1.png)" : "";
   return (
-    <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" className="h-full relative top-10git ">
-      <AnimatedBG />
-      <div className="text-start flex-col items-start lg:my-[5%] pb-2">
+    <div className="h-full  "> 
+      <div className="text-start flex-col items-start lg:pt-[3%] pt-[10%] relative">
+        <AnimatedBG />
         <div
           data-aos="zoom-in"
           data-aos-easing="linear"
           data-aos-duration="3000"
-          className="flex  flex-col sm:items-center justify-between sm:p-24 pt-32 px-8 bg-cover  h-full  bg-opacity-30 z-2 w-full "
-          style={{ backgroundImage: "", height: "92%" }}
+          className="flex  flex-col sm:items-center justify-between sm:p-24 pt-32 px-8 bg-cover  h-full  bg-opacity-30  w-full "
         >
           <div class="flex ">
             <h1 class="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl sm:text-6xl font-extrabold text-transparent  font-montserrat sm:my-4 my-2 inline">
@@ -44,7 +42,7 @@ export default function HeroSecion() {
             <SkillText />
           </div>
 
-          <div className="my-8  sm:mx-0">
+          <div className="sm:my-8  my-16  sm:mx-0 sm:pb-[6%] pb-40">
             <HeroBotton />
           </div>
         </div>

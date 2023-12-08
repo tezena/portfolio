@@ -1,9 +1,8 @@
 .string {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  text-align: start;
   animation: move 5s infinite;
-  align-items: center;
   padding: 4px 2px;
 
 }

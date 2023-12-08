@@ -72,7 +72,7 @@ export function StickyNavbar() {
   );
 
   return (
-    <Navbar className={`sticky top-0 z-10 h-max max-w-full rounded-none px-8 py-4 lg:px-8 lg:py-6 text-black bg-white bg-opacity-95  dark:bg-black dark:text-white dark:bg-opacity-75 ${ubuntu.className}`}>
+    <Navbar className={`sticky top-0 z-30 h-max max-w-full rounded-none px-8 py-4 lg:px-8 lg:py-6 text-black bg-white bg-opacity-95  dark:bg-black dark:text-white dark:bg-opacity-75 ${ubuntu.className}`}>
       <div className="flex items-center justify-between lg:justify-center text-blue-gray-900">
         <Typography
           as="a"
@@ -81,7 +81,7 @@ export function StickyNavbar() {
         >
          <img src="images/logo.png"/>
         </Typography>
-        <div className="flex items-center gap-4 lg:w-80 ">
+        <div className="flex items-start gap-4 lg:w-80 w-42">
           <div className="mr-4 hidden lg:block">{navList}</div>
 
           <div className="flex items-center gap-x-1 lg:absolute lg:right-10">
@@ -89,7 +89,7 @@ export function StickyNavbar() {
           </div>
           <IconButton
             variant="text"
-            className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+            className="ml-auto h-20 w-20 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden mx-auto "
             ripple={false}
             onClick={() => setOpenNav(!openNav)}
           >
@@ -97,8 +97,8 @@ export function StickyNavbar() {
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
-                className="h-6 w-6"
-                viewBox="0 0 24 24"
+                className="h-12 w-12"
+                viewBox="0 0 28 28"
                 stroke="currentColor"
                 strokeWidth={2}
               >
@@ -111,7 +111,7 @@ export function StickyNavbar() {
             ) : (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
+                className=" h-18 w-18"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2}

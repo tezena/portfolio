@@ -5,7 +5,7 @@ import ProjectDisplay from './components/ProjectDisplay'
 
 const Home = () => {
   return (
-      <div className='h-full'>
+      <div className=' min-h-full block'>
       <HeroSecion />
       <AboutSection />
       <ProjectDisplay/>

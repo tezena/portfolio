@@ -13,15 +13,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="winter">
       <body className="dark:bg-black bg-slate-50">
-        <div
-         
-        >
+       
           <Providers>
             <StickyNavbar />
             {children}
             <Footer/>
           </Providers>
-        </div>
+       
       </body>
     </html>
   );
