@@ -1,4 +1,13 @@
-import React from 'react'
+import { React ,useEffect} from 'react'
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { Montserrat } from 'next/font/google';
+
+const montitle = Montserrat({
+  subsets: ["latin"],
+  weight: "500",
+  style: "italic",
+});
 
 
 const companyes = [
@@ -22,37 +31,57 @@ const companyes = [
 ];
 
 const WorkWithDisplay = () => {
+    
+  useEffect(() => {
+    AOS.init()
+  }, []);
+  
     return (
-      <div className="h-1/4   bg-[#DAA520]  lg:py-32 sm:py-20 lg:px-32  py-16 px-8 ">
-        <div className=" inline-flex flex-nowrap w-full  [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] overflow-hidden">
-          <ul className="flex items-center justify-center md:justify-start [&_li]:mx-16 [&_img]:max-w-none animate-infinite-scroll">
-            {companyes.map((item, index) => (
-              <li className="sm:w-40 sm:h-24  w-28 h-12 " key={index}>
-                {" "}
-                <img
-                  className="w-full h-full"
-                  src={item.url}
-                  alt={item.alt}
-                />{" "}
-              </li>
-            ))}
-          </ul>
-
-          <ul
-            className="flex items-center justify-center md:justify-start [&_li]:mx-16 [&_img]:max-w-none animate-infinite-scroll"
-            aria-hidden="true"
+      <div className="h-1/4    lg:pb-32 sm:pb-20   pb-16">
+        <div
+          data-aos="fade-right"
+          data-aos-easing="linear"
+          data-aos-duration="700"
+          className=" sm:py-16 py-8 lg:px-32 px-16 "
+        >
+          <h1
+            className={`text-black dark:text-slate-100 md:text-4xl text-2xl sm:text-3xl ${montitle.className}`}
           >
-            {companyes.map((item, index) => (
-              <li className="sm:w-40 sm:h-24  w-28 h-12     " key={index}>
-                {" "}
-                <img
-                  className="w-full h-full"
-                  src={item.url}
-                  alt={item.alt}
-                />{" "}
-              </li>
-            ))}
-          </ul>
+            {" "}
+            Worked with
+          </h1>
+        </div>
+        <div className="bg-[#DAA520] dark:bg-opacity-50 py-12 w-full ">
+          <div className=" inline-flex flex-nowrap w-full  [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] overflow-hidden">
+            <ul className="flex items-center justify-center md:justify-start [&_li]:mx-16 [&_img]:max-w-none animate-infinite-scroll">
+              {companyes.map((item, index) => (
+                <li className="sm:w-40 sm:h-24  w-28 h-12 " key={index}>
+                  {" "}
+                  <img
+                    className="w-full h-full"
+                    src={item.url}
+                    alt={item.alt}
+                  />{" "}
+                </li>
+              ))}
+            </ul>
+
+            <ul
+              className="flex items-center justify-center md:justify-start [&_li]:mx-16 [&_img]:max-w-none animate-infinite-scroll"
+              aria-hidden="true"
+            >
+              {companyes.map((item, index) => (
+                <li className="sm:w-40 sm:h-24  w-28 h-12     " key={index}>
+                  {" "}
+                  <img
+                    className="w-full h-full"
+                    src={item.url}
+                    alt={item.alt}
+                  />{" "}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     );
