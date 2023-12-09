@@ -25,7 +25,7 @@ export default function HeroSecion() {
         <div
           data-aos="zoom-in"
           data-aos-easing="linear"
-          data-aos-duration="3000"
+          data-aos-duration="1500"
           className="flex  flex-col sm:items-center justify-between sm:p-24 pt-32 px-8 bg-cover  h-full  bg-opacity-30  w-full "
         >
           <div class={`flex ${montserrat.className} `}>

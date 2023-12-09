@@ -3,6 +3,7 @@ import HeroSecion from './components/HeroSecion'
 import AboutSection from './components/AboutSection'
 import ServiceDisplay from './components/ServiceDisplay'
 import WorkWithDisplay from './components/WorkWithDisplay'
+import ProjectDisplay from './components/ProjectDisplay'
 
 const Home = () => {
   return (
@@ -10,7 +11,8 @@ const Home = () => {
       <HeroSecion />
       <AboutSection />
       <ServiceDisplay />
-      <WorkWithDisplay/>
+      <WorkWithDisplay />
+      <ProjectDisplay/>
     </div>
   )
 }
