@@ -53,9 +53,9 @@ const ProjectDisplay = () => {
           {projects.map((project, index) => {
             return (
               <Card2Animation key={index}>
-                <div class="bg-white text-black rounded-lg overflow-hidden mb-10">
+                <div class="bg-white text-black rounded-lg overflow-hidden mb-10 group  ">
                   <ProjectSlider images={project.images} />
-                  <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                  <div class="p-8 z-[300] sm:p-9 md:p-7 xl:p-9 text-center relative overflow-hidden group-hover:text-white">
                     <h3>
                       <a
                         href="javascript:void(0)"
@@ -94,6 +94,8 @@ const ProjectDisplay = () => {
                     >
                       View Details
                     </a>
+                    <div class="ease z-[-10]  transition-all absolute  delay-150 right-0 bottom-0 h-full w-[120%] translate-x-[100%] bg-[#DAA520]  duration-[2000ms]  group-hover:-translate-x-[30%] group-hover:z-0"></div>
+                    {/* <div class="ease   transition-all absolute  delay-150  left-0 bottom-0 h-full w- -translate-x-[100%] bg-[#DAA520] opacity-50 duration-[2000ms]  group-hover:translate-x-[50%]"></div> */}
                   </div>
                 </div>
               </Card2Animation>
