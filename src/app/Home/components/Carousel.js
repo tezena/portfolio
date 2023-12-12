@@ -4,8 +4,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
-export default class ProjectSlider extends Component {
-  render() {
+export default function ProjectSlider(props) {
+ 
+  const {images } = props;
+
     const settings = {
       dots: false,
       infinite: true,
@@ -15,25 +17,22 @@ export default class ProjectSlider extends Component {
       autoplay:true
     };
     return (
-      <div>
+      <div >
         <Slider {...settings}>
-          <img
-            src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-01.jpg"
-            alt="image"
-            class="w-full"
-          />
-          <img
-            src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-03.jpg"
-            alt="image"
-            class="w-full"
-          />
-          <img
-            src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-02.jpg"
-            alt="image"
-            class="w-full"
-          />
+          
+          {
+            images.map((image, index) => 
+               (
+                <img
+                  key={index}
+                  src={image.url}
+                  alt={image.alt}
+                  class="w-full"
+                />
+              )
+            )
+         }
         </Slider>
       </div>
     );
-  }
 }

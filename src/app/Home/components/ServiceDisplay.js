@@ -2,6 +2,7 @@ import { React ,useEffect} from 'react'
 import { Montserrat, Roboto } from 'next/font/google';
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { BigTitleAnimation } from './AosAnimation';
 
 
 const montitle = Montserrat({ subsets: ["latin"], weight: "500", style: "italic" });
@@ -45,14 +46,19 @@ const ServiceDisplay = () => {
   ];
   return (
     <div className="h-1/2 flex-col items-center justify-center pb-12  lg:px-32 px-16 ">
-      <div data-aos="fade-right"
-        data-aos-easing="linear"
-        data-aos-duration="1000" className=" py-24 ">
-        <h1 className={`text-black dark:text-slate-100 md:text-4xl text-2xl sm:text-3xl ${montitle.className}`}>
-          {" "}
-          Here's what I can do to help:
-        </h1>
-      </div>
+      <BigTitleAnimation>
+        <div
+          className=" py-24 "
+        >
+          <h1
+            className={`text-black dark:text-slate-100 md:text-4xl text-2xl sm:text-3xl ${montitle.className}`}
+          >
+            {" "}
+            Here's what I can do to help:
+          </h1>
+        </div>
+      </BigTitleAnimation>
+
       <div class="grid lg:grid-cols-3 md:grid-cols-2    gap-8">
         {services.map((item, index) => {
           return (

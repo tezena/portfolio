@@ -2,6 +2,7 @@ import { React ,useEffect} from 'react'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Montserrat } from 'next/font/google';
+import { BigTitleAnimation } from './AosAnimation';
 
 const montitle = Montserrat({
   subsets: ["latin"],
@@ -38,19 +39,19 @@ const WorkWithDisplay = () => {
   
     return (
       <div className="h-1/4    lg:pb-32 sm:pb-20   pb-16">
-        <div
-          data-aos="fade-right"
-          data-aos-easing="linear"
-          data-aos-duration="700"
-          className=" sm:py-16 py-8 lg:px-32 px-16 "
-        >
-          <h1
-            className={`text-black dark:text-slate-100 md:text-4xl text-2xl sm:text-3xl ${montitle.className}`}
+        <BigTitleAnimation>
+          <div
+            className=" sm:py-16 py-8 lg:px-32 px-16 "
           >
-            {" "}
-            Worked with
-          </h1>
-        </div>
+            <h1
+              className={`text-black dark:text-slate-100 md:text-4xl text-2xl sm:text-3xl ${montitle.className}`}
+            >
+              {" "}
+              Worked with
+            </h1>
+          </div>
+        </BigTitleAnimation>
+
         <div className="bg-[#DAA520] dark:bg-opacity-50 py-12 w-full ">
           <div className=" inline-flex flex-nowrap w-full  [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] overflow-hidden">
             <ul className="flex items-center justify-center md:justify-start [&_li]:mx-16 [&_img]:max-w-none animate-infinite-scroll">
