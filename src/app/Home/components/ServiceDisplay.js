@@ -1,8 +1,7 @@
-import { React ,useEffect} from 'react'
+
 import { Montserrat, Roboto } from 'next/font/google';
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { BigTitleAnimation } from './AosAnimation';
+import { BigTitleAnimation,CardAnimation } from './AosAnimation';
+
 
 
 const montitle = Montserrat({ subsets: ["latin"], weight: "500", style: "italic" });
@@ -18,9 +17,6 @@ const roboSub = Roboto({
 });
 
 const ServiceDisplay = () => {
-  useEffect(() => {
-    AOS.init()
-  }, [])
   
   const services = [
     {
@@ -62,36 +58,32 @@ const ServiceDisplay = () => {
       <div class="grid lg:grid-cols-3 md:grid-cols-2    gap-8">
         {services.map((item, index) => {
           return (
-            <div
-              data-aos="fade-right"
-              data-aos-easing="linear"
-              data-aos-duration="1000"
-              key={index}
-              class="grid   relative "
-            >
-              <div
-                class="group shadow-lg hover:shadow-2xl duration-200 delay-75 w-full bg-white dark:bg-gray-900 rounded-sm py-6 pr-6 pl-9"
-                href=""
-              >
-                <p
-                  class={` text-xl sm:text-2xl font-bold text-gray-500 dark:text-slate-400 group-hover:text-gray-700  dark:group-hover:text-slate-300 ${montitle2.className}`}
+            <CardAnimation key={index} >
+              
+                <div
+                  class="group shadow-lg hover:shadow-2xl duration-200 delay-75 w-full bg-white dark:bg-gray-900 rounded-sm py-6 pr-6 pl-9"
+                  href=""
                 >
-                  {" "}
-                  {item.title}{" "}
-                </p>
+                  <p
+                    class={` text-xl sm:text-2xl font-bold text-gray-500 dark:text-slate-400 group-hover:text-gray-700  dark:group-hover:text-slate-300 ${montitle2.className}`}
+                  >
+                    {" "}
+                    {item.title}{" "}
+                  </p>
 
-                <p
-                  class={`text-sm font-normal text-gray-500 dark:text-slate-300 group-hover:text-gray-700 dark:group-hover:text-slate-200  mt-2 leading-6  text-justify  ${roboSub.className}`}
-                >
-                  {" "}
-                  {item.detail}{" "}
-                </p>
+                  <p
+                    class={`text-sm font-normal text-gray-500 dark:text-slate-300 group-hover:text-gray-700 dark:group-hover:text-slate-200  mt-2 leading-6  text-justify  ${roboSub.className}`}
+                  >
+                    {" "}
+                    {item.detail}{" "}
+                  </p>
 
-                <div class="bg-[#DAA520]   group-hover:bg-opacity-75 h-full w-4 absolute top-0 left-0">
-                  {" "}
+                  <div class="bg-[#DAA520]   group-hover:bg-opacity-75 h-full w-4 absolute top-0 left-0">
+                    {" "}
+                  </div>
                 </div>
-              </div>
-            </div>
+            
+            </CardAnimation>
           );
         })}
       </div>

@@ -1,6 +1,4 @@
-import { React ,useEffect} from 'react'
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 import { Montserrat } from 'next/font/google';
 import { BigTitleAnimation } from './AosAnimation';
 
@@ -33,12 +31,9 @@ const companyes = [
 
 const WorkWithDisplay = () => {
     
-  useEffect(() => {
-    AOS.init()
-  }, []);
-  
+
     return (
-      <div className="h-1/4    lg:pb-32 sm:pb-20   pb-16">
+      <div className="h-1/4    ">
         <BigTitleAnimation>
           <div
             className=" sm:py-16 py-8 lg:px-32 px-16 "
