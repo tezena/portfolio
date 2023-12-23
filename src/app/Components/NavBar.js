@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import {React, useState ,useEffect} from "react";
 import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
 import {GrClose}  from "react-icons/gr";
@@ -12,22 +12,31 @@ import {
   Card,
 } from "@material-tailwind/react";
 import Swith_dark_mode from "./Swith_dark_mode";
+import { usePathname, useRouter } from "next/navigation";
 import { Roboto } from "next/font/google";
  const ubuntu = Roboto({ subsets: ["greek"], weight: "500" });
 
 export function StickyNavbar() {
-  const [openNav, setOpenNav] = React.useState(false);
+  const [openNav, setOpenNav] = useState(false);
+  const [activeLink, setActiveLink] = useState("");
  
+     const router = usePathname();
 
-  React.useEffect(() => {
+  useEffect(() => {
+
+    const currentPage = router;
+
+    setActiveLink(currentPage);
+
     window.addEventListener(
       "resize",
       () => window.innerWidth >= 960 && setOpenNav(false)
     );
-  }, []);
+  }, [router]);
+
 
   const navList = (
-    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-10">
+    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-10 ">
       <Typography
         as="li"
         variant="small"
@@ -35,9 +44,12 @@ export function StickyNavbar() {
         className="p-1 font-normal"
       >
         <Link href="/" className="flex items-center  relative group">
-          <span className="absolute left-0 -top-1  h-1 a -z-10 w-0 group-hover:w-full group-hover:transition-all"></span>
-          <p>Home</p>
-          <span className="absolute left-0 -bottom-1  h-1 bg-[#F8BE0C] -z-10 w-full group-hover:w-0 group-hover:transition-all delay-100"></span>
+          <p className="hover:text-[#DAA520]">Home</p>
+          <span
+            className={`absolute left-0 -bottom-1  h-1 bg-[#F8BE0C] -z-10 ${
+              activeLink === "/" ? "w-full" : ""
+            } group-hover:w-0 transition-all delay-100`}
+          ></span>
         </Link>
       </Typography>
       <Typography
@@ -46,8 +58,13 @@ export function StickyNavbar() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <Link href="/showcase" className="flex items-center">
-          Showcase
+        <Link href="/Showcase" className="flex items-center  relative group">
+          <p className="hover:text-[#DAA520]">Showcase</p>
+          <span
+            className={`absolute left-0 -bottom-1  h-1 bg-[#F8BE0C] -z-10 ${
+              activeLink === "/Showcase" ? "w-full" : ""
+            } group-hover:w-0 transition-all delay-100`}
+          ></span>
         </Link>
       </Typography>
       <Typography
@@ -56,8 +73,13 @@ export function StickyNavbar() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <Link href="/ContactMe" className="flex items-center">
-          Contact
+        <Link href="/ContactMe" className="flex items-center  relative group">
+          <p className="hover:text-[#DAA520]">Contact</p>
+          <span
+            className={`absolute left-0 -bottom-1  h-1 bg-[#F8BE0C] -z-10 ${
+              activeLink === "/ContactMe" ? "w-full" : ""
+            } group-hover:w-0 transition-all delay-100`}
+          ></span>
         </Link>
       </Typography>
       <Typography
@@ -66,8 +88,13 @@ export function StickyNavbar() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <Link href="/About" className="flex items-center">
-          About
+        <Link href="/About" className="flex items-center  relative group">
+          <p className="hover:text-[#DAA520]">About</p>
+          <span
+            className={`absolute left-0 -bottom-1  h-1 bg-[#F8BE0C] -z-10 ${
+              activeLink === "/About" ? "w-full" : ""
+            } group-hover:w-0 transition-all delay-100`}
+          ></span>
         </Link>
       </Typography>
     </ul>
