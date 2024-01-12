@@ -2,6 +2,7 @@ import ProjectSlider from "../../Components/Carousel";
 import { Card2Animation, BigTitleAnimation } from "../../Components/AosAnimation";
 import { Montserrat, Roboto } from "next/font/google";
 import TechStackDisplayer from "./TechStackDisplay";
+import Link from "next/link";
 
 const montitle = Montserrat({
   subsets: ["latin"],
@@ -17,6 +18,7 @@ const roboSub = Roboto({
 const projects = [
   {
     title: "Art Gallery Platform",
+    link: "https://github.com/tezena/portfolio",
     detail:
       "Lorem ipsum dolor sit amet pretium consectetur adipiscingelit. Lorem consectetur adipiscing elit.",
     images: [
@@ -37,6 +39,7 @@ const projects = [
   },
   {
     title: "Art Gallery Platform",
+    link: "https://github.com/tezena/portfolio",
     detail:
       "Lorem ipsum dolor sit amet pretium consectetur adipiscingelit. Lorem consectetur adipiscing elit.",
     images: [
@@ -53,7 +56,7 @@ const projects = [
         alt: "image3",
       },
     ],
-    techStack: ["React", "Tailwind", "Node.js"],
+    techStack: ["React", "Tailwind", "Node.js", "React", "Tailwind"],
   },
 ];
 
@@ -65,21 +68,31 @@ const ProjectCard = () => {
                   return (
                     <div
                       key={index}
-                      className="flex my-5   shadow-lg hover:shadow-2xl duration-200 delay-75 overflow-hidden rounded-md  dark:bg-gray-900"
+                      className="flex my-5 items-stretch  shadow-lg hover:shadow-2xl duration-200 delay-75 overflow-hidden rounded-md  dark:bg-gray-900"
                     >
-                      <div className="w-1/2 text-black text-start m-5 p-5">
-                        <h1
-                          className={`text-black dark:text-slate-100 md:text-4xl text-2xl sm:text-3xl ${montitle.className}`}
-                        >
-                          {item.title}
-                        </h1>
+                      <div className="w-1/2 text-black text-start m-5 p-5 it relative">
+                        <div className="flex justify-between">
+                          <h1
+                            className={`text-black dark:text-slate-100 md:text-4xl text-2xl sm:text-3xl ${montitle.className}`}
+                          >
+                            {item.title}
+                          </h1>
+                          <Link href={item.link}>
+                            <div className=" shadow-lg hover:shadow-2xl w-20 duration-200 delay-75 rounded-full  text-center py-2 px-2  text-white bg-[#DAA520] border-white border ">
+                              <p className={`mx-auto text-sm ${montitle.className}`}>
+                                Github
+                              </p>
+                            </div>
+                          </Link>
+                        </div>
+
                         <p
                           class={`text-sm font-normal text-gray-500 dark:text-slate-300 group-hover:text-gray-700 dark:group-hover:text-slate-200  mt-2 leading-6  text-justify  ${roboSub.className}`}
                         >
                           {item.detail}
                         </p>
 
-                        <div>
+                        <div className="absolute bottom-5 ">
                           <TechStackDisplayer techStack={item.techStack} />
                         </div>
                       </div>
