@@ -1,3 +1,4 @@
+"use client"
 import React, { Component } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -27,7 +28,7 @@ export default function ProjectSlider(props) {
                   key={index}
                   src={image.url}
                   alt={image.alt}
-                  class="w-full"
+                  class="w-full object-contain"
                 />
               )
             )

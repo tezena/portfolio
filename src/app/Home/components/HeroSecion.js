@@ -1,4 +1,3 @@
-
 import { useSelect } from "@material-tailwind/react";
 import Image from "next/image";
 import { useSelector } from "react-redux/es/hooks/useSelector";
@@ -6,13 +5,14 @@ import HeroBotton from "@/app/Components/heroBotton";
 import AnimatedBG from "../../Components/AnimatedBackground/AnimatedBG";
 import SkillText from "../../Components/animateSkillText/SkillText";
 import { Montserrat } from "next/font/google";
-import { MainTitleAnimation } from "./AosAnimation";
+import { MainTitleAnimation } from "../../Components/AosAnimation";
 
-
-const montserrat = Montserrat({subsets:["cyrillic"], weight: "900", style:"italic"})
+const montserrat = Montserrat({
+  subsets: ["cyrillic"],
+  weight: "900",
+  style: "italic",
+});
 export default function HeroSecion() {
-
-
   const dark_mode = useSelector((state) => state.dark_mode.value);
   return (
     <div className="h-full  ">

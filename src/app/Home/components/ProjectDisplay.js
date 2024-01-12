@@ -1,17 +1,15 @@
-
-import ProjectSlider from "./Carousel";
-import { Card2Animation, BigTitleAnimation } from "./AosAnimation";
+import ProjectSlider from "../../Components/Carousel";
+import {
+  Card2Animation,
+  BigTitleAnimation,
+} from "../../Components/AosAnimation";
 import { Montserrat, Roboto } from "next/font/google";
-
-
 
 const montitle = Montserrat({
   subsets: ["latin"],
   weight: "500",
   style: "italic",
 });
-
-
 
 const projects = [
   {
@@ -89,7 +87,7 @@ const ProjectDisplay = () => {
                      rounded-full
                      text-base text-body-color
                      font-medium
-                     hover:border-primary hover:bg-primary hover:text-white
+                      hover:bg-[#DAA520]   hover:text-white
                      transition
                      "
                     >

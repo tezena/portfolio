@@ -1,8 +1,7 @@
-
 import { Montserrat } from "next/font/google";
 import MoreButton from "@/app/Components/MoreButton";
-import { AboutTextAnimation } from "./AosAnimation";
-import { MoreButtonAnimation } from "./AosAnimation";
+import { AboutTextAnimation } from "../../Components/AosAnimation";
+import { MoreButtonAnimation } from "../../Components/AosAnimation";
 
 const roboto = Montserrat({
   subsets: ["vietnamese"],
@@ -12,8 +11,6 @@ const roboto = Montserrat({
 });
 
 const AboutSection = () => {
-
-
   return (
     <div className="sm:h-1/2 h-full  bg-[#DAA520] dark:bg-opacity-50  flex-col items-center sm:p-8  px-8 sm:px-20 lg:px-56 sm:py-40 py-32 lg:text-[2rem] md:text-[1.5rem] sm:text-xl text-center font-extrabold ">
       <AboutTextAnimation>

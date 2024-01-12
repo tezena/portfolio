@@ -1,10 +1,14 @@
+import { Montserrat, Roboto } from "next/font/google";
+import {
+  BigTitleAnimation,
+  CardAnimation,
+} from "../../Components/AosAnimation";
 
-import { Montserrat, Roboto } from 'next/font/google';
-import { BigTitleAnimation,CardAnimation } from './AosAnimation';
-
-
-
-const montitle = Montserrat({ subsets: ["latin"], weight: "500", style: "italic" });
+const montitle = Montserrat({
+  subsets: ["latin"],
+  weight: "500",
+  style: "italic",
+});
 const montitle2 = Montserrat({
   subsets: ["latin"],
   weight: "800",
@@ -17,7 +21,6 @@ const roboSub = Roboto({
 });
 
 const ServiceDisplay = () => {
-  
   const services = [
     {
       title: "Mobile Application",
@@ -43,9 +46,7 @@ const ServiceDisplay = () => {
   return (
     <div className="h-1/2 flex-col items-center justify-center pb-12  lg:px-32 px-16 ">
       <BigTitleAnimation>
-        <div
-          className=" py-24 "
-        >
+        <div className=" py-24 ">
           <h1
             className={`text-black dark:text-slate-100 md:text-4xl text-2xl sm:text-3xl ${montitle.className}`}
           >
@@ -58,37 +59,35 @@ const ServiceDisplay = () => {
       <div class="grid lg:grid-cols-3 md:grid-cols-2    gap-8">
         {services.map((item, index) => {
           return (
-            <CardAnimation key={index} >
-              
-                <div
-                  class="group shadow-lg hover:shadow-2xl duration-200 delay-75 w-full bg-white dark:bg-gray-900 rounded-sm py-6 pr-6 pl-9"
-                  href=""
+            <CardAnimation key={index}>
+              <div
+                class="group shadow-lg hover:shadow-2xl duration-200 delay-75 w-full bg-white dark:bg-gray-900 rounded-sm py-6 pr-6 pl-9"
+                href=""
+              >
+                <p
+                  class={` text-xl sm:text-2xl font-bold text-gray-500 dark:text-slate-400 group-hover:text-gray-700  dark:group-hover:text-slate-300 ${montitle2.className}`}
                 >
-                  <p
-                    class={` text-xl sm:text-2xl font-bold text-gray-500 dark:text-slate-400 group-hover:text-gray-700  dark:group-hover:text-slate-300 ${montitle2.className}`}
-                  >
-                    {" "}
-                    {item.title}{" "}
-                  </p>
+                  {" "}
+                  {item.title}{" "}
+                </p>
 
-                  <p
-                    class={`text-sm font-normal text-gray-500 dark:text-slate-300 group-hover:text-gray-700 dark:group-hover:text-slate-200  mt-2 leading-6  text-justify  ${roboSub.className}`}
-                  >
-                    {" "}
-                    {item.detail}{" "}
-                  </p>
+                <p
+                  class={`text-sm font-normal text-gray-500 dark:text-slate-300 group-hover:text-gray-700 dark:group-hover:text-slate-200  mt-2 leading-6  text-justify  ${roboSub.className}`}
+                >
+                  {" "}
+                  {item.detail}{" "}
+                </p>
 
-                  <div class="bg-[#DAA520]   group-hover:bg-opacity-75 h-full w-4 absolute top-0 left-0">
-                    {" "}
-                  </div>
+                <div class="bg-[#DAA520]   group-hover:bg-opacity-75 h-full w-4 absolute top-0 left-0">
+                  {" "}
                 </div>
-            
+              </div>
             </CardAnimation>
           );
         })}
       </div>
     </div>
   );
-}
+};
 
-export default ServiceDisplay
+export default ServiceDisplay;
