@@ -12,14 +12,12 @@ const inter = Inter({ subsets: ["latin"] });
 export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="winter">
-      <body className="dark:bg-black bg-slate-50">
-       
-          <Providers>
-            <StickyNavbar />
-            {children}
-            <Footer/>
-          </Providers>
-       
+      <body className="dark:bg-[#121212] bg-slate-50">
+        <Providers>
+          <StickyNavbar />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

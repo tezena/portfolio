@@ -19,9 +19,7 @@ export default function HeroSecion() {
       <div className="text-start flex-col items-start sm:items-center sm:text-center lg:pt-[3%] pt-[10%] sm:pt-[6%] relative">
         <AnimatedBG />
         <MainTitleAnimation>
-          <div
-            className="flex  flex-col sm:items-center justify-between sm:p-24 pt-32 px-8 bg-cover  h-full  bg-opacity-30  w-full "
-          >
+          <div className="flex  flex-col sm:items-center justify-between sm:p-24 pt-32 px-8 bg-cover  h-full  bg-opacity-30  w-full ">
             <div class={`flex ${montserrat.className} `}>
               <h1 class="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-4xl sm:text-6xl font-extrabold text-transparent   sm:my-4 my-2 inline">
                 Hi ,

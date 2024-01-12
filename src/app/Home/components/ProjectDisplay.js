@@ -53,10 +53,10 @@ const ProjectDisplay = () => {
           {projects.map((project, index) => {
             return (
               <Card2Animation key={index}>
-                <div class="bg-white text-black rounded-lg overflow-hidden mb-10 group  ">
+                <div class="bg-white dark:bg-gray-900 text-black dark:text-white rounded-lg overflow-hidden mb-10 group  ">
                   <ProjectSlider images={project.images} />
-                  
-                  <div class="p-8 z-10 sm:p-9 md:p-7 xl:p-9 text-center relative overflow-hidden group-hover:text-white transition-all duration-[1000ms] ease">
+
+                  <div class="p-8 z-10 sm:p-9 md:p-7 xl:p-9 text-center relative overflow-hidden group-hover:text-white group-hover:dark:text-black transition-all duration-[1000ms] ease">
                     <h3>
                       <a
                         href="javascript:void(0)"
@@ -96,7 +96,10 @@ const ProjectDisplay = () => {
                       View Details
                     </a>
                     <div class="ease   transition-all absolute  right-0 bottom-0 h-full w-[150%] translate-x-[100%] bg-[#DAA520]  bg-opacity-[90%] duration-[500ms]  group-hover:-translate-x-[0] z-[-10]"></div>
-                    <div class="ease   transition-all absolute    left-0 bottom-0 h-full w-[150%] -translate-x-[100%]  opacity-75 duration-[500ms]  group-hover:translate-x-[0] z-[-20] bg-no-repeat " style={{backgroundImage:`url("images/bg_card.png")` }}></div>
+                    <div
+                      class="ease   transition-all absolute    left-0 bottom-0 h-full w-[150%] -translate-x-[100%]  opacity-75 duration-[500ms]  group-hover:translate-x-[0] z-[-20] bg-no-repeat "
+                      style={{ backgroundImage: `url("images/bg_card.png")` }}
+                    ></div>
                   </div>
                 </div>
               </Card2Animation>
