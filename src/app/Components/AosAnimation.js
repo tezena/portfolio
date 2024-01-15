@@ -82,6 +82,21 @@ const Card2Animation = ({ children }) => {
     </div>
   );
 };
+const Card3Animation = ({ children }) => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+  return (
+    <div
+      data-aos="fade-right"
+      data-aos-easing="linear"
+      data-aos-duration="1000"
+      class="w-full"
+    >
+      {children}
+    </div>
+  );
+};
 
 const MoreButtonAnimation = ({ children }) => {
   useEffect(() => {
@@ -100,4 +115,4 @@ const MoreButtonAnimation = ({ children }) => {
 
 
 
-export {BigTitleAnimation,CardAnimation,Card2Animation,MainTitleAnimation,AboutTextAnimation,MoreButtonAnimation}
+export {BigTitleAnimation,CardAnimation,Card2Animation,MainTitleAnimation,AboutTextAnimation,MoreButtonAnimation,Card3Animation}
